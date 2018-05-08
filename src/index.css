@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.user-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.all-users-title {
+  display: flex;
+  justify-content: center;
+}
+
+.update-button {
+  background-color: #4CAF50;
+}
+
+.edit-button {
+  background-color: blue;
+  color: white;
+}
+
+.delete-button {
+  background-color: red;
+  color: white;
+}
+
+.create-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.all-users {
+  font: bold 13px Arial;
+  background-color: orange;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  margin-top: 10px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  width: 100px;
+}
+
+.create-new-user {
+  font: bold 13px Arial;
+  background-color: orange;
+  color: #333333;
+  padding-top: 35px;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
