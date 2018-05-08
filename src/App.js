@@ -12,6 +12,7 @@ class App extends Component {
         <Route path="/edit" component={EditUser} />
         <Route path="/newUser" component={UserForm} />
         <Route path="/index" component={AllUsers} />
+        <Route exact path="/" component={AllUsers} />
       </div>
     </BrowserRouter>
     );
