@@ -13,13 +13,13 @@ describe('UserForm', () => {
    expect(wrapper.length).toBe(1)
   })
 
-  // it('should call the mock create function', () => {
-  //  const mockCreatefn = jest.fn();
-  //  const wrapper = shallow(<UserForm store={{getState: jest.fn(), subscribe: jest.fn()}}/>)
-  //  wrapper.find('.create-button').simulate(
-  //    'click',
-  //    {preventDefault() {}}
-  //  )
-  //  expect(mockCreatefn.mock.calls.length).toBe(1)
-  // })
+  it('should call the mock create function', () => {
+   const mockCreatefn = jest.fn();
+   const wrapper = shallow(<UserForm store={{getState: jest.fn(), subscribe: jest.fn()}}/>)
+   wrapper.find('.create-button').simulate(
+     'click',
+     {preventDefault() {}}
+   )
+   expect(mockCreatefn.mock.calls.length).toBe(1)
+  })
 })

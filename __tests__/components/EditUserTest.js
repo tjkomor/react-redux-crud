@@ -12,9 +12,13 @@ describe('Edit User', () => {
   })
 
   it('should call handleEdit on submit', () => {
+    const mockFn = jest.fn()
     const user = {firstName: "tyler", lastName: "komoroske", address: "1234"}
     const wrapper = mount(<EditUser store={{getState: jest.fn()}} user={user}/>)
-    wrapper.find('.update-button').simulate("click")
+    wrapper.find('.update-button').simulate(
+      'click',
+      {preventDefault() {}}
+    )
     expect(mockFn).toHaveBeenCalled();
   })
 })
