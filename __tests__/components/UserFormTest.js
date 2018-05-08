@@ -22,4 +22,18 @@ describe('UserForm', () => {
    )
    expect(mockCreatefn.mock.calls.length).toBe(1)
   })
+
+  it('add user does not get called if insufficient data', () => {
+    const mockAddUser = jest.fn()
+    const original = UserForm.prototype.handleEdit()
+    UserForm.prototype.handleEdit() = mockAddUser
+
+    const event = {firstName: "tyler", lastName: "", address: "1234"}
+    UserForm.prototype.handleEdit(event)
+
+    expect(window.alert).toHaveBeenCalledWith("All fields must be filled out");
+
+    UserForm.prototype.handleEdit() = original
+  })
+
 })

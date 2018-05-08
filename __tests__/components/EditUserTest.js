@@ -21,4 +21,18 @@ describe('Edit User', () => {
     )
     expect(mockFn).toHaveBeenCalled();
   })
+
+  it('update user does not get called if insufficient data', () => {
+    const mockUpdateUser = jest.fn()
+    const original = EditUser.prototype.handleEdit()
+    EditUser.prototype.handleEdit() = mockUpdateUser
+
+    const event = {firstName: "tyler", lastName: "", address: "1234"}
+    EditUser.prototype.handleEdit(event)
+
+    expect(window.alert).toHaveBeenCalledWith("All fields must be filled out");
+
+    EditUser.prototype.handleEdit() = original
+  })
+
 })

@@ -11,4 +11,5 @@ describe('User Component', () => {
 
    expect(wrapper.length).toBe(1)
   })
+
 })
